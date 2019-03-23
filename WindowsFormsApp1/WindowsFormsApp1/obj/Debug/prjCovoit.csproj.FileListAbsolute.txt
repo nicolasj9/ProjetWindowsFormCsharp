@@ -25,3 +25,6 @@ C:\Users\Nicolas\Desktop\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.c
 C:\Users\Nicolas\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\Nicolas\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\Nicolas\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.xml
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
