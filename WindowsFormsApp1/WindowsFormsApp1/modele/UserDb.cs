@@ -95,6 +95,7 @@ namespace prjCovoit.modele
 
             MySqlCommand cmdsql = new MySqlCommand(sql, Form1.objCnx);
 
+            return uneListe;
 
         }
     }

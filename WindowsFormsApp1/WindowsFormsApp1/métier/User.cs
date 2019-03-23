@@ -18,8 +18,9 @@ namespace prjCovoit.métier
         private int numInscrip;
 
         //Constructeur User
-        public User(string unNom, string unPrenom, string unMail, string unStatut, string unBadge, int num)
+        public User(int unId,string unNom, string unPrenom, string unMail, string unStatut, string unBadge, int num)
         {
+            id = unId;
             nom = unNom;
             prenom = unPrenom;
             mail = unMail;

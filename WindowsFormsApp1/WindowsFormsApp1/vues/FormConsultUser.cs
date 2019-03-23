@@ -17,18 +17,7 @@ namespace prjCovoit.vues
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            List<métier.User> listeUser = modele.UserDb.genererListeUser();
-            foreach(métier.User unUser in listeUser)
-            {
-                listBox1.Items.Add(unUser.getId()); //+ "\t" + pour sauter une ligne et concaténer
-                listBox2.Items.Add(unUser.getNom());
-                listBox3.Items.Add(unUser.getPrenom());
-                listBox4.Items.Add(unUser.getMail());
-                /*listBox5.Items.Add(unUser.getVille());*/
-            }
-        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -45,7 +34,7 @@ namespace prjCovoit.vues
 
         }
         
-        private void FormConsultUser_Load(objet sender, EventArgs e)
+        private void FormConsultUser_Load(object sender, EventArgs e)
         {
             List<métier.User> listeUser = modele.UserDb.genererListeUser();
 

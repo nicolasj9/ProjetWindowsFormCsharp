@@ -101,11 +101,16 @@ namespace prjCovoit.vues
 
         private void button5_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < listeSupprimer.cou; i++)
+            for (int i = 0; i < listeSupprimer.Count; i++)
             {
                 int numero = listeSupprimer[i].getNumInscrip();
                 modele.UserDb.supprimerUserDB(numero);
             }
+        }
+
+        private void FormImport_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

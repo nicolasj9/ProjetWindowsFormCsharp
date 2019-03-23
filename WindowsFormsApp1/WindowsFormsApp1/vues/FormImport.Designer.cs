@@ -193,6 +193,7 @@
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Name = "FormImport";
+            this.Load += new System.EventHandler(this.FormImport_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

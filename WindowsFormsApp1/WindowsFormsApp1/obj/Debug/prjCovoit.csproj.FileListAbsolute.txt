@@ -28,3 +28,12 @@ C:\Users\Nicolas\Desktop\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.
 C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.csprojResolveAssemblyReference.cache
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.Form1.resources
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.vues.FormConsultUser.resources
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.vues.FormImport.resources
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.csproj.GenerateResource.Cache
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\JO\Desktop\projet scolaire\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MySql.Data.xml
