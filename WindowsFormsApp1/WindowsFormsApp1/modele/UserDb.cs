@@ -31,7 +31,7 @@ namespace prjCovoit.modele
                 int numinscription = int.Parse(objResultat.GetValue(6).ToString());
 
                 //Création d'un objet de la classe User
-                métier.User objUser = new métier.User(id, nom, prenom, mail, statut, badge, numinscription);
+                métier.User objUser = new métier.User(nom, prenom, mail, statut, badge, numinscription);
                 uneListe.Add(objUser);
             }
             objResultat.Close();
@@ -50,8 +50,7 @@ namespace prjCovoit.modele
 
         public static MySqlDataReader listeUserAjouter()
         {
-            string sql = "select * from importuser where numInscription";
-            sql = sql + "NOT IN (select numInscription from personnes)";
+            string sql = "select * from importuser where numInscription NOT IN (select numInscription from personnes)";
 
             MySqlCommand cmd = new MySqlCommand(sql, Form1.objCnx);
 
@@ -61,8 +60,7 @@ namespace prjCovoit.modele
 
         public static MySqlDataReader listeUserSupprimer()
         {
-            string sql = "select * from importuser where numInscription";
-            sql = sql + "NOT IN (select numInscription from personnes)";
+            string sql = "select * from importuser where numInscription NOT IN (select numInscription from personnes)";
 
             MySqlCommand cmd = new MySqlCommand(sql, Form1.objCnx);
 
@@ -80,9 +78,9 @@ namespace prjCovoit.modele
             cmdsql.ExecuteNonQuery();
         }
 
-        public static void supprimerUserDB(int num)
+        public static void supprimerUserDB(int id)
         {
-            string sql = "delete from users where numinscrip="+num;
+            string sql = "delete from users where id="+id;
 
             MySqlCommand cmdsql = new MySqlCommand(sql, Form1.objCnx);
             cmdsql.ExecuteNonQuery();

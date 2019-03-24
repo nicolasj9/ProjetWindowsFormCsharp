@@ -64,7 +64,7 @@ namespace prjCovoit.vues
             resultat1.Close();
 
             MySqlDataReader resultat2 = modele.UserDb.listeUserSupprimer();
-            while (resultat1.Read())
+            while (resultat2.Read())
             {
                 int id = int.Parse(resultat2.GetValue(0).ToString());
                 string nom = resultat2.GetValue(1).ToString();
@@ -74,7 +74,7 @@ namespace prjCovoit.vues
                 string badge = resultat2.GetValue(5).ToString();
                 int num = int.Parse(resultat2.GetValue(6).ToString());
                 métier.UserImport objUserSurpprimer = new métier.UserImport(nom, prenom, email, cat, badge, num);
-                listBox2.Items.Add(resultat2.GetValue(0) + "\t" + resultat1.GetValue(1));
+                listBox3.Items.Add(resultat2.GetValue(0) + "\t" + resultat2.GetValue(1));
             }
             resultat2.Close();
         }
@@ -89,11 +89,10 @@ namespace prjCovoit.vues
                 string mail = resultat.GetValue(2).ToString();
                 string categ = resultat.GetValue(3).ToString();
                 string badge = resultat.GetValue(4).ToString();
-                int num = int.Parse(resultat.GetValue(5).ToString());
+                int num; Int32.TryParse(resultat.GetValue(5).ToString(), out num);
 
-                métier.UserImport objUserImport = new métier.UserImport(nom,prenom,mail, categ,badge,num);
+                métier.User objUserImport = new métier.User(nom,prenom,mail, categ,badge,num);
 
-                listBox2.Items.Add(resultat.GetValue(0) + "\t" + resultat.GetValue(1));
             }
             resultat.Close();
         }
@@ -103,12 +102,22 @@ namespace prjCovoit.vues
         {
             for (int i = 0; i < listeSupprimer.Count; i++)
             {
-                int numero = listeSupprimer[i].getNumInscrip();
+                int numero = listeSupprimer[i].getId();
                 modele.UserDb.supprimerUserDB(numero);
             }
         }
 
         private void FormImport_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
