@@ -12,6 +12,8 @@ namespace prjCovoit.vues
 {
     public partial class FormConsultUser : Form
     {
+        List<métier.User> listeUser;
+
         public FormConsultUser()
         {
             InitializeComponent();
@@ -49,8 +51,13 @@ namespace prjCovoit.vues
             try
             {
                 int numLigne = dataGridView1.CurrentRow.Index;
-                label3.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                label4.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+
+                label1.Text = listeUser[numLigne].getNom();
+                label2.Text = listeUser[numLigne].getPrenom();
+                label3.Text = listeUser[numLigne].getMail();
+                label4.Text = listeUser[numLigne].getStatut();
+                label5.Text = listeUser[numLigne].getBadge();
+                label6.Text = listeUser[numLigne].getNumInscrip().ToString();
             }
             catch (Exception ex)
             {
@@ -67,5 +74,12 @@ namespace prjCovoit.vues
                 dataGridView1.Rows.Add(unUser.getId(), unUser.getNom(), unUser.getPrenom());
             }
         }
+
+       /* private void button2_Click(object sender, EventArgs e)
+        {
+            label10.Text();
+            FormMail objForm = new FormMail;
+            objForm.ShowDialog();
+        }*/
     }
 }

@@ -12,7 +12,7 @@ namespace prjCovoit.modele
         public static List<métier.User> genererListeUser()
         {
             List<métier.User> uneListe = new List<métier.User>();
-            string sql = "select * from personne";  //NOM DE LA TABLE DANS LA BDD
+            string sql = "select * from personnes";  //NOM DE LA TABLE DANS LA BDD
 
             //Création d'un objet commande sql
             MySqlCommand cmdSql = new MySqlCommand(sql, Form1.objCnx);
@@ -40,12 +40,27 @@ namespace prjCovoit.modele
 
         public static void insertLigneUser(string nom, string prenom, string mail, string statut, string badge, int numinscription)
         {
-            string sql = "insert into importuser (nom, prenom, mail, statut, badge, numInscription) values ('"+nom+"', '"+prenom+"', '"+mail+"', '"+statut+"', '"+badge+"', '"+numinscription+"');";  //NOM DE LA TABLE DANS LA BDD
+            string verif = "select * from importuser where nom='"+nom+"', prenom='"+prenom+"', mail='"+mail+"', statut='"+statut+"', badge='"+badge+"', numInscription='"+numinscription+"'";
+            string verifTwo = "select * from importuser where numInscription='" + numinscription + "'";
 
-            //Création d'un objet commande sql
-            MySqlCommand cmdSql = new MySqlCommand(sql, Form1.objCnx);
-            //Exécution de la comande sql -> objet résultat
-            cmdSql.ExecuteNonQuery();
+            //int intverif = 0;
+
+            //int intverifTwo = 0;
+
+            MySqlCommand veriff = new MySqlCommand(verif, Form1.objCnx);
+            MySqlCommand verifTwof = new MySqlCommand(verifTwo, Form1.objCnx);
+
+            MySqlDataReader myReaderVerif = veriff.ExecuteReader();
+            MySqlDataReader myReaderVerifTwo = verifTwof.ExecuteReader();
+
+            if (!myReaderVerifTwo.Read() || !myReaderVerif.Read())
+            {
+                string sql = "insert into importuser (nom, prenom, mail, statut, badge, numInscription) values ('" + nom + "', '" + prenom + "', '" + mail + "', '" + statut + "', '" + badge + "', '" + numinscription + "');";  //NOM DE LA TABLE DANS LA BDD
+                                                                                                                                                                                                                                  //Création d'un objet commande sql
+                MySqlCommand cmdSql = new MySqlCommand(sql, Form1.objCnx);
+                //Exécution de la comande sql -> objet résultat
+                cmdSql.ExecuteNonQuery();
+            }
         }
 
         public static MySqlDataReader listeUserAjouter()
@@ -55,6 +70,7 @@ namespace prjCovoit.modele
             MySqlCommand cmd = new MySqlCommand(sql, Form1.objCnx);
 
             MySqlDataReader resultat = cmd.ExecuteReader();
+
             return resultat;
         }
 
@@ -70,21 +86,20 @@ namespace prjCovoit.modele
 
         public static void ajouterNouveauUser(string nom, string prenom, string mail, string cat, string badge, int num)
         {
-            string sql = "insert into users values";
-            sql = sql + "(null, '" + nom + "','" + prenom + "', '" + mail + "','" + cat + "','" + badge + "','" + num + "');";
+            string sql = "insert into personnes (nom, prenom, mail, statut, badge, numInscription) values  ('" + nom + "','" + prenom + "', '" + mail + "','" + cat + "','" + badge + "','" + num + "');";
        
             MySqlCommand cmdsql = new MySqlCommand(sql, Form1.objCnx);
 
             cmdsql.ExecuteNonQuery();
         }
 
-        public static void supprimerUserDB(int id)
+       /* public static void supprimerUserDB(int id)
         {
-            string sql = "delete from users where id="+id;
+            string sql = "delete from peron where id="+id;
 
             MySqlCommand cmdsql = new MySqlCommand(sql, Form1.objCnx);
             cmdsql.ExecuteNonQuery();
-        }
+        } */
 
         public static List<métier.User> rechercherUser(string str)
         {
@@ -92,6 +107,23 @@ namespace prjCovoit.modele
             string sql = "select * from users where nom like '"+str+"'";
 
             MySqlCommand cmdsql = new MySqlCommand(sql, Form1.objCnx);
+
+            MySqlDataReader objResultat = cmdsql.ExecuteReader();
+
+            while(objResultat.Read())
+            {
+                //int id = int.Parse(objResultat.GetValue(0).ToString());
+                string nom = objResultat.GetValue(1).ToString();
+                string prenom = objResultat.GetValue(2).ToString();
+                string email = objResultat.GetValue(3).ToString();
+                string cat = objResultat.GetValue(4).ToString();
+                string badge = objResultat.GetValue(5).ToString();
+                int num = int.Parse(objResultat.GetValue(6).ToString());
+
+                métier.User unUser = new métier.User(nom, prenom, email, cat, badge, num);
+
+                uneListe.Add(unUser); 
+            }
 
             return uneListe;
 
