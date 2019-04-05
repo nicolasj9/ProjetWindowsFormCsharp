@@ -50,3 +50,4 @@ C:\Users\Nicolas\Desktop\projet de merde\ProjetWindowsFormCsharp\WindowsFormsApp
 C:\Users\Nicolas\Desktop\projet de merde\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.vues.FormImport.resources
 C:\Users\Nicolas\Desktop\projet de merde\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\prjCovoit.csproj.GenerateResource.Cache
 C:\Users\Nicolas\Desktop\projet de merde\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.vues.FormMail.resources
+C:\Users\Nicolas\Desktop\projet de merde\ProjetWindowsFormCsharp\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.vues.FormSmtp.resources

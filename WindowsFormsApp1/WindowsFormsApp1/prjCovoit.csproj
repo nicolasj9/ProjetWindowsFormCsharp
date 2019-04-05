@@ -76,6 +76,12 @@
     <Compile Include="vues\FormMail.Designer.cs">
       <DependentUpon>FormMail.cs</DependentUpon>
     </Compile>
+    <Compile Include="vues\FormSmtp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vues\FormSmtp.Designer.cs">
+      <DependentUpon>FormSmtp.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vues\FormMail.resx">
       <DependentUpon>FormMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vues\FormSmtp.resx">
+      <DependentUpon>FormSmtp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

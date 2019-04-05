@@ -38,12 +38,7 @@ namespace prjCovoit.vues
         
         private void FormConsultUser_Load(object sender, EventArgs e)
         {
-            List<métier.User> listeUser = modele.UserDb.genererListeUser();
 
-            foreach (métier.User unUser in listeUser)
-            {
-                dataGridView1.Rows.Add(unUser.getId(), unUser.getNom(), unUser.getPrenom());
-            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -75,11 +70,21 @@ namespace prjCovoit.vues
             }
         }
 
-       /* private void button2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            label10.Text();
-            FormMail objForm = new FormMail;
-            objForm.ShowDialog();
-        }*/
+            listeUser = modele.UserDb.genererListeUser();
+            foreach (métier.User unUser in listeUser)
+            {
+                //  listBox1.Items.Add(unUser.getId() + "\t" + unUser.getNom());
+                dataGridView1.Rows.Add(unUser.getId(), unUser.getNom(), unUser.getPrenom());
+            }
+        }
+
+        /* private void button2_Click(object sender, EventArgs e)
+         {
+             label10.Text();
+             FormMail objForm = new FormMail;
+             objForm.ShowDialog();
+         }*/
     }
 }

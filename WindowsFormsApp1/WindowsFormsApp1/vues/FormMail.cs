@@ -53,5 +53,21 @@ namespace WindowsFormsApp1.vues
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            vues.FormSmtp objsmtp = new vues.FormSmtp();
+            objsmtp.ShowDialog();    //Affiche l'objet trajet
+        }
+
+        public static void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

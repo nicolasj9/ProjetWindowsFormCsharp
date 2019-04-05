@@ -28,8 +28,7 @@ namespace prjCovoit.modele
                 string mail = objResultat.GetValue(3).ToString();
                 string badge = objResultat.GetValue(4).ToString();
                 string statut = objResultat.GetValue(5).ToString();
-                int numinscription = int.Parse(objResultat.GetValue(6).ToString());
-
+                int numinscription = Int.TryParse(objResultat.GetValue(6).ToString());
                 //Création d'un objet de la classe User
                 métier.User objUser = new métier.User(nom, prenom, mail, statut, badge, numinscription);
                 uneListe.Add(objUser);
